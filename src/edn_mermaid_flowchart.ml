@@ -3,11 +3,13 @@ module Util = Edn_mermaid_util
 (* TODO: support option *)
 
 type node_id = string [@@deriving cconv]
+(* S: Square, R: Round_edges, C: Circle, A: Asymetric, RB: Rhombus *)
 type shape = S | R | C | A | RB [@@deriving cconv]
 type node_opts = { text: string;
                    shape: shape [@default S]; } [@@deriving cconv]
 type node = node_id * node_opts [@@deriving cconv]
 
+(* A: Arrow, O: Open, D: Dot, T: thick *)
 type link = A | O | D | T [@@deriving cconv]
 type connection_opts = { text: string [@default ""];
                          link: link [@default A]; } [@@deriving cconv]

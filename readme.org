@@ -1,5 +1,29 @@
 * edn_mermaid
-  Converts `edn` file to `mermaid` file.
+  Converts *edn* file to *mermaid* file.
+
+  #+BEGIN_SRC clojure
+    ;; Node shape
+    ;; S: Square, R: Round_edges, C: Circle, A: Asymetric, RB: Rhombus
+
+    ;; Link type
+    ;; A: Arrow, O: Open, D: Dot, T: thick
+
+    {:direction :td
+     :nodes [[:a {:text "a-node"
+                  :shape "R"}]              ; Round
+             [:b {:text "b-node"
+                  :shape "C"}]              ; Circle
+             [:c {:text "c-node"}]]
+     :flow [[:a :b {:text "hi"
+                    :link "A"}]             ; arrow
+            [:a :c {:text "hi"
+                    :link "O"}]             ; open
+            [:b :c {:text "hi"
+                    :link "D"}]             ; dot
+            [:c :a {:text "hi"
+                    :link "T"}]             ; thick
+            ]}
+  #+END_SRC
 
 ** Build
    #+BEGIN_SRC sh
@@ -10,3 +34,6 @@
    #+BEGIN_SRC sh
      edn_mermaid example/sequence.edn
    #+END_SRC
+
+** Examples
+   check https://github.com/tiensonqin/edn_mermaid/tree/master/example.
