@@ -1,0 +1,17 @@
+opam-version: "1.2"
+name: "edn_mermaid"
+version: "0.0.0"
+maintainer: "Tienson Qin <tiensonqin@gmail.com>"
+authors: [ "Tienson Qin" ]
+license: "MIT"
+homepage: "https://github.com/tiensonqin/edn_mermaid.git"
+dev-repo: "https://github.com/tiensonqin/edn_mermaid.git"
+
+build: [
+  [ "./script/build"  ]
+]
+
+depends: [
+  "edn"
+  "cconv"
+]

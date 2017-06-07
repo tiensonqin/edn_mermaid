@@ -1,0 +1,13 @@
+_build
+.*.swp
+*.native
+*.mmd
+*.png
+*.docdir
+.session
+TAGS
+version.ml
+setup.log
+setup.data
+edn_mermaid.install
+man/

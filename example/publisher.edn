@@ -1,0 +1,32 @@
+{:direction :td
+ :nodes [[:a {:text "Publisher Connect"
+              :shape "R"}]
+         [:b {:text "get/create show"}]
+         [:c {:text "if can publish?"
+              :shape "RB"}]
+         [:d {:text "Find Leader"}]
+         [:e {:text "Is Leader?"
+              :shape "RB"}]
+         [:f {:text "start push to leader"}]
+         [:g {:text "start push to upstream"}]
+         [:h {:text "return show start publish"}]
+         [:i {:text "Reject"
+              :shape "R"}]
+         [:j {:text "Leader Change"}]
+         [:k {:text "Stop push"}]]
+ :subgraphs [["Publisher"
+              [[:a :b {}]
+               [:b :c {}]
+               [:c :i {:text "No"}]
+               [:c :d {:text "Yes"}]
+               [:d :e {}]
+               [:e :f {:text "No"}]
+               [:e :g {:text "Yes"}]
+               [:f :h {}]
+               [:g :h {}]]]
+
+             ["Leader Change"
+              [[:j :k {}]]]]
+ :flow [[:f :j {}]
+        [:g :j {}]
+        [:k :d {}]]}

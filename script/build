@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eu
+set -o pipefail
+
+BUILD_FLAGS=(-use-ocamlfind -j 0 -pkg str)
+
+function main {
+    ocamlbuild "${BUILD_FLAGS[@]}" src/edn_mermaid.cmxa
+    ocamlbuild "${BUILD_FLAGS[@]}" src/edn_mermaid.native
+    exit 0
+}
+
+main

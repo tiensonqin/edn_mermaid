@@ -1,0 +1,12 @@
+* edn_mermaid
+  Converts `edn` file to `mermaid` file.
+
+** Build
+   #+BEGIN_SRC sh
+     ./script/build
+   #+END_SRC
+
+** Usage
+   #+BEGIN_SRC sh
+     edn_mermaid example/sequence.edn
+   #+END_SRC

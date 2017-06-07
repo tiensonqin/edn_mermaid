@@ -1,0 +1,7 @@
+(jbuild_version 1)
+
+(executable
+ ((name edn_mermaid)
+  (libraries (edn cconv))
+  ;; (preprocess (pps (edn.ppx)))
+  ))

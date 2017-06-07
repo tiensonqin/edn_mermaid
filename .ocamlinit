@@ -1,0 +1,8 @@
+#use "topfind";;
+#require "cconv.ppx";;
+#require "edn.cconv";;
+#directory "_build/src";;
+#load "edn_mermaid_util.cmo";;
+#load "edn_mermaid_flowchart.cmo";;
+module Flowchart = Edn_mermaid_flowchart;;
+module Sequence = Edn_mermaid_sequence;;

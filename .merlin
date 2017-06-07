@@ -1,0 +1,5 @@
+B _build/default
+FLG -w -40
+PKG cconv
+PKG edn
+S .

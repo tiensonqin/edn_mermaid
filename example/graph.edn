@@ -1,0 +1,8 @@
+{:direction :td
+ :nodes [[:a {:text "a-node"
+              :shape "R"}]
+         [:b {:text "b-node"}]
+         [:c {:text "c-node"}]]
+ :flow [[:a :b {:text "hi"}]
+        [:a :c {:text "hi"}]
+        [:b :c {:text "hi"}]]}

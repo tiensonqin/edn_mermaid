@@ -1,0 +1,7 @@
+{:participants ["John" "Alice"]         ; optional, for order
+ :notes [["John" :left "haha"]
+         ["Alice" :right "haha"]]
+ :loops [["Reply every minute"          ; optional
+          [["Alice" "John" "Hello John, how are you?" "SA"]]]]
+ :messages [["Alice" "John" "Hello John, how are you?" "SA"]
+            ["John" "Alice" "Great!" "SA"]]}

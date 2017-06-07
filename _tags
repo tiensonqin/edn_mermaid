@@ -1,0 +1,6 @@
+<src>: include
+true: bin_annot
+true: package(edn)
+true: package(edn.cconv)
+true: package(cconv.ppx)
+true: package(ppx_deriving.std)
